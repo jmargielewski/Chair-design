@@ -24,7 +24,7 @@ header{
   background-color: black;
   width: 100%;
   color: white;
-  line-height: 40px;
+  line-height: 50px;
 }
 
 header h1{
@@ -41,7 +41,7 @@ nav{
 
 header li{
   display: inline-block;
-  padding-right: 30px;
+  padding-left: 30px;
   position: relative;
   a{
     text-decoration: none;
@@ -87,45 +87,62 @@ header li{
   background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(200,200,200,1) 100%);
   background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(200,200,200,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=0 );
-  min-height: 450px;
+}
+
+.containerSlider{
   display: flex;
+  justify-content: center;
   align-items: center;
+  min-height: 450px;
+}
+
+.markLeft{
+  position: absolute;
+  top:220px;
+  left:160px;
+  font-size: 90px;
+  color: #24ba9f;
+}
+
+.markRight{
+  position: absolute;
+  top: 220px;
+  right: 160px;
+  font-size: 90px;
+  color:  #24ba9f;
+}
+
+.markRight:hover {
+  cursor: pointer;
+}
+
+.markLeft:hover {
+  cursor: pointer;
 }
 
 .left{
   /*border: 1px solid red;*/
   position: relative;
-  float: left;
   width: 40%;
 }
 
-.markLeft{
-  position: absolute;
-  top:110px;
-  font-size: 70px;
-  color:  #24ba9f;
-  font-weight: 0;
+.left li {
+  display: none;
+}
+
+.left .visible{
+  display: block;
 }
 
 .right{
   /*border: 1px solid red;*/
   position: relative;
-  float: left;
-  width: 60%;
+  width: 50%;
   text-align: center;
-  margin-top: 40px;
-}
-
-.markRight{
-  position: absolute;
-  top:70px;
-  right: 0px;
-  font-size: 70px;
-  color:  #24ba9f;
 }
 
 div.right h2{
-  font-size: 32px;
+  font-size: 37px;
   padding-top: 40px;
 }
 
@@ -239,6 +256,9 @@ span.under{
   color: black;
   width: 300px;
   margin: 20px 0 20px 0;
+}
+#pricing span{
+  padding-top: 15px;
 }
 
 .box4{
@@ -476,31 +496,33 @@ textarea{
 }
 
 /*sekcja 6*/
-footer{
+.containerFooter{
   color: #d5d5d5;
-  line-height: 35px;
-  padding: 20px 0 20px 0;
+  line-height: 45px;
+  display: flex;
+  align-items: center;
 }
 
 .copy{
   display: inline-block;
-  padding-right: 430px;
+  padding-right: 380px;
 }
 
 .socials{
   display: inline-block;
-  padding-right: 40px;
+  padding-right: 10px;
 }
 
 .footer_social{
   width: 10px;
   height: 10px;
 }
-
-footer h1 span {
+.containerFooter h1 span {
   font-weight: bold;
 }
+
 .logoMin{
   display: inline-block;
   font-size: 18px;
+  padding-left: 40px
 }
